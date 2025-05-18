@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Relaxia – Bienestar Cósmico</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <div class="background-overlay"></div>
+
+  <!-- Navbar Mejorado -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" alt="Relaxia Logo">
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="que-es.html">¿Qué es RelaxIA?</a></li>
+        <li><a href="como-funciona.html">¿Cómo funciona?</a></li>
+        <li><a href="actualizaciones.html">Próximas actualizaciones</a></li>
+      </ul>
+      
+      <div class="acciones">
+        <a href="login.html" class="btn">Iniciar sesión</a>
+        <a href="registro.html" class="btn btn-registro">Registrarse</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section Mejorada -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Relájate. Transforma. Reconéctate <span class="highlight">✨</span></h1>
+        <p class="subtitle">Conecta con tu bienestar emocional a través de una experiencia cósmica impulsada por IA.</p>
+      </div>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card" id="transformacion">
+          <div class="benefit-image">
+            <img src="img/transformacion.jpg" alt="Transformación">
+            <div class="overlay"></div>
+          </div>
+          <div class="benefit-info">
+            <h3>Transformación</h3>
+            <p>Redescubre tu equilibrio interior con herramientas que se adaptan a ti.</p>
+          </div>
+        </div>
+        
+        <div class="benefit-card" id="terapia">
+          <div class="benefit-image">
+            <img src="img/terapia.jpg" alt="Terapia">
+            <div class="overlay"></div>
+          </div>
+          <div class="benefit-info">
+            <h3>Terapia</h3>
+            <p>Conversaciones empáticas guiadas por IA para que nunca estés sola.</p>
+          </div>
+        </div>
+        
+        <div class="benefit-card" id="relajacion">
+          <div class="benefit-image">
+            <img src="img/relajacion.jpg" alt="Relajación">
+            <div class="overlay"></div>
+          </div>
+          <div class="benefit-info">
+            <h3>Relajación</h3>
+            <p>Respira, escucha y suelta. Tu momento de paz comienza aquí.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Secciones de Contenido Mejoradas -->
+  <section class="info-section unique">
+    <div class="container">
+      <h2 class="section-title">¿Qué hace única a RelaxIA?</h2>
+      <div class="content-grid">
+        <div class="content-text">
+          <ol class="feature-list numbered">
+            <li>Personalización emocional con IA</li>
+            <li>Disponible para Android</li>
+            <li>Accesible desde cualquier lugar y momento</li>
+            <li>Frases inspiradoras y contenido motivacional diario</li>
+            <li>Ejercicios de relajación</li>
+          </ol>
+        </div>
+        <div class="content-image framed">
+          <img src="img/unica.jpg" alt="RelaxIA única">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section for-who">
+    <div class="container">
+      <h2 class="section-title">¿Para quién es?</h2>
+      <div class="content-grid reverse">
+        <div class="content-text">
+          <ul class="feature-list boxed">
+            <li>Personas con altos niveles de estrés o ansiedad</li>
+            <li>Estudiantes y profesionistas con carga mental</li>
+            <li>Cualquier persona que necesite un momento de paz en su día</li>
+          </ul>
+        </div>
+        <div class="content-image framed">
+          <img src="img/quien.jpg" alt="Para quién es RelaxIA">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section how-to-get">
+    <div class="container">
+      <h2 class="section-title">¿Cómo obtenerla?</h2>
+      <div class="steps-horizontal">
+        <div class="step-card">
+          <div class="step-icon">📱</div>
+          <p>Próximamente en App Store y Play Store</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">📝</div>
+          <p>Regístrate para acceso anticipado</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">📬</div>
+          <p>Recibe notificaciones exclusivas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de Contacto Mejorado -->
+  <section class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Contacto</h2>
+      <form id="contactForm" class="contact-form">
+        <div class="form-group">
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required>
+        </div>
+        <button type="submit" class="submit-btn">Enviar</button>
+        <p id="mensajeConfirmacion" class="confirmation-message">¡Nos pondremos en contacto contigo pronto! ✨</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Chatbot Flotante -->
+<div class="chatbot-container" id="chatbotContainer">
+  <div class="chatbot-header">
+    <h3>Asistente RelaxIA</h3>
+    <button class="chatbot-close" id="chatbotClose">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  <div class="chatbot-messages" id="chatbotMessages">
+    <div class="chatbot-message bot">
+      <div class="message-content">
+        ¡Hola! 👋 Soy tu asistente de RelaxIA. ¿En qué puedo ayudarte hoy? Puedes preguntarme sobre:
+        <ul class="suggested-questions">
+          <li>¿Qué es RelaxIA?</li>
+          <li>¿Cómo funciona la app?</li>
+          <li>Técnicas de relajación</li>
+          <li>Manejo del estrés</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" id="chatbotInput" placeholder="Escribe tu pregunta...">
+    <button id="chatbotSend"><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<button class="chatbot-toggle" id="chatbotToggle">
+  <i class="fas fa-robot"></i>
+</button>
+
+  <!-- Footer Mejorado -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/logo.png" alt="RelaxIA Logo" class="footer-logo">
+          <p>Tu compañero de bienestar emocional</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Enlaces Rápidos</h4>
+          <ul>
+            <li><a href="index.html.html">Inicio</a></li>
+            <li><a href="que-es.html">¿Qué es RelaxIA?</a></li>
+            <li><a href="como-funciona.html">Cómo funciona</a></li>
+            <li><a href="actualizaciones.html">Actualizaciones</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <p><i class="fas fa-envelope"></i> contacto@relaxia.com</p>
+          <p><i class="fas fa-phone"></i> +52 899 123 4567</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2023 RelaxIA. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Efecto de scroll para navbar
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Animación para las tarjetas de beneficios
+    const benefitCards = document.querySelectorAll('.benefit-card');
+    benefitCards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.classList.add('hovered');
+        benefitCards.forEach(otherCard => {
+          if (otherCard !== this) {
+            otherCard.classList.add('dimmed');
+          }
+        });
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.classList.remove('hovered');
+        benefitCards.forEach(otherCard => {
+          otherCard.classList.remove('dimmed');
+        });
+      });
+    });
+
+    // Formulario de contacto
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('mensajeConfirmacion').style.display = 'block';
+      this.reset();
+      setTimeout(() => {
+        document.getElementById('mensajeConfirmacion').style.display = 'none';
+      }, 5000);
+    });
+  </script>
+
+<link rel="stylesheet" href="estilos-chatbot.css">
+<script src="scripts-chatbot.js"></script>
+</body>
+</html>

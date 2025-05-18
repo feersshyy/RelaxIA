@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Cómo funciona? – RelaxIA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos-como_funciona.css">
+</head>
+<body>
+  <div class="background-overlay"></div>
+
+  <!-- Navbar Mejorado -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="img/logo.png" alt="RelaxIA Logo" class="logo-img">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html.html">Inicio</a></li>
+        <li><a href="que-es.html">¿Qué es RelaxIA?</a></li>
+        <li><a href="como-funciona.html" class="active">¿Cómo funciona?</a></li>
+        <li><a href="actualizaciones.html">Próximas actualizaciones</a></li>
+      </ul>
+      <div class="acciones">
+        <a href="login.html" class="btn">Iniciar sesión</a>
+        <a href="registro.html" class="btn btn-registro">Registrarse</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section Mejorada -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">¿Cómo funciona <span class="highlight">RelaxIA</span>?</h1>
+          <p class="hero-subtitle">
+            Combina tecnología avanzada con herramientas de relajación emocional en 3 simples pasos. 
+            <span class="subtitle-highlight">Aquí te explicamos cómo:</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pasos Mejorados -->
+    <section class="steps-section">
+      <div class="container">
+        <div class="steps-container">
+          <!-- Paso 1 -->
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="step-content">
+              <h3 class="step-title">Reconocimiento emocional</h3>
+              <p class="step-description">
+                La app te hará preguntas rápidas o analizará tus respuestas escritas para identificar 
+                cómo te sientes en el momento.
+              </p>
+            </div>
+            <div class="step-decoration"></div>
+          </div>
+
+          <!-- Paso 2 -->
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-icon">
+              <i class="fas fa-magic"></i>
+            </div>
+            <div class="step-content">
+              <h3 class="step-title">Contenido personalizado</h3>
+              <p class="step-description">
+                Con base en tu estado emocional, la inteligencia artificial te mostrará frases motivacionales, 
+                consejos y ejercicios de respiración adaptados a ti.
+              </p>
+            </div>
+            <div class="step-decoration"></div>
+          </div>
+
+          <!-- Paso 3 -->
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <div class="step-content">
+              <h3 class="step-title">Uso inmediato</h3>
+              <p class="step-description">
+                Puedes acceder a la app en cualquier momento y lugar para recibir apoyo instantáneo 
+                que te ayude a reducir el estrés y mejorar tu bienestar.
+              </p>
+            </div>
+            <div class="step-decoration"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Mejorado -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/logo.png" alt="RelaxIA Logo" class="footer-logo">
+          <p class="footer-slogan">Tu compañero de bienestar emocional</p>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-title">Enlaces Rápidos</h4>
+          <ul>
+            <li><a href="index.html.html">Inicio</a></li>
+            <li><a href="que-es.html">¿Qué es RelaxIA?</a></li>
+            <li><a href="como-funciona.html">Cómo funciona</a></li>
+            <li><a href="actualizaciones.html">Actualizaciones</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-title">Contacto</h4>
+          <p class="contact-info"><i class="fas fa-envelope"></i> contacto@relaxia.com</p>
+          <p class="contact-info"><i class="fas fa-phone"></i> +52 899 123 4567</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 RelaxIA. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Efecto de scroll para navbar
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Animación para los pasos al hacer scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.step-card').forEach(step => {
+      observer.observe(step);
+    });
+  </script>
+</body>
+</html>
