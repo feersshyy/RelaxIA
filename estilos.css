@@ -299,7 +299,9 @@ body {
 .feature-list {
   list-style: none;
 }
-
+.feature-list.numbered {
+  counter-reset: item-counter; 
+}
 .feature-list.numbered li {
   position: relative;
   padding-left: 50px;
@@ -309,8 +311,8 @@ body {
 }
 
 .feature-list.numbered li::before {
-  content: counter(item) ".";
-  counter-increment: item;
+  content: counter(item-counter) "."; 
+  counter-increment: item-counter; 
   position: absolute;
   left: 0;
   top: 0;
